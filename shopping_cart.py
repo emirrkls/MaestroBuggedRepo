@@ -37,9 +37,7 @@ class ShoppingCart:
         subtotal = self.calculate_subtotal()
         
         # 3
-        total = subtotal + shipping_fee
-        
-        if self.discount_rate > 0:
-            total = total * (1 - self.discount_rate)
+        subtotal_with_discount = subtotal * (1 - self.discount_rate)
+        total = subtotal_with_discount + shipping_fee
             
         return total
