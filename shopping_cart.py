@@ -15,7 +15,7 @@ class ShoppingCart:
         """
         if name in self.items:
             # 1
-            del self.items[name]
+            self.items[name]['quantity'] -= quantity
         else:
             # 2
             pass
